@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Financeiro</title>
+  <!-- Importando fonte do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  <style>
+    
+  </style>
+</head>
+<body> 
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Dashboard Financeiro</h1>
+    <p>Controle seus gastos de forma simples</p>
+  </header>
+
+  <!-- Área principal do app -->
+  <div class="container">
+    <!-- Formulário para adicionar lançamentos -->
+    <div class="form-group">
+      <input type="text" id="descricao" placeholder="Descrição">
+      <input type="number" id="valor" placeholder="Valor">
+      <select id="tipo">
+        <option value="receita">Receita</option>
+        <option value="despesa">Despesa</option>
+      </select>
+      <button onclick="adicionarLancamento()">Adicionar</button>
+    </div>
+
+    <!-- Lista de lançamentos -->
+    <ul id="lista"></ul>
+
+    <!-- Resumo dos valores -->
+    <div class="resumo">
+      <span>Total de Receitas: R$ <span id="totalReceitas">0.00</span></span>
+      <span>Total de Despesas: R$ <span id="totalDespesas">0.00</span></span>
+      <span>Saldo: R$ <span id="saldo">0.00</span></span>
+    </div>
+  </div>
+        
+</body>
+</html>
